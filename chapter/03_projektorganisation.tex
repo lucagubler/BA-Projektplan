@@ -1,0 +1,28 @@
+\section{Projektorganisation}
+
+\subsection{Organisationsstruktur}
+\begin{tikzpicture}[auto, node distance = 0.4cm, thick,
+  every node/.style = {rectangle, font = \sffamily, white,
+    top color = blue!90!black, bottom color = blue!60!black,
+    text width = 4.5cm, align = center, minimum height = 1.5cm}]
+  	
+  	\node (NVS)                                 {\textbf{NVS}\\Studienarbeit};
+  	\coordinate [below = 0.9cm of NVS] (Mitte);
+  	\coordinate [below = 1.9cm of NVS] (Unten);
+  	\node (Betreuer)		[right = 2mm of Mitte]  	{\textbf{Betreuer} \\ Laurent Metzger \\ Urs Baumann};
+  	\node (Backend)		[below = 5mm of Betreuer]  	{\textbf{Backend} \\ Alessandro Bonomo};
+  	\node (Frontend)		[left  = of Backend]  		{\textbf{Frontend / Network} \\ Luca Gubler};
+  
+  	\draw [blue!60!black,thick]
+    (NVS)    -- (Mitte) -- (Betreuer)
+    (Betreuer)   -- (Mitte) -- (Unten) -| (Backend)
+    (Unten) -| (Frontend);
+\end{tikzpicture}
+
+\noindent Im Bild wurde die Organisationsstruktur dargestellt. Diese Organigramm wurde jedoch nur zum aufzeigen der groben Zuständigkeiten erstellt. Natürlich wird sich das Team gegenseitig unterstützen, falls Probleme auftreten.
+
+\subsection{Externe Schnittstellen}
+In dieser Studienarbeit übernimmt Professor Frank Koch die Rolle des Betreuers. Stephan Meier, welcher bereits bei der früheren Bachelorarbeit die Rolle als externer Co-Examinators übernahm, wird auch bei dieser Bachelorarbeit diese Aufgabe übernehmen. Zusätzlich wird Professor Laurent Metzger diese Bachelorarbeit als interner Co-Examinator betreuen.
+
+
+\newpage
