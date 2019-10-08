@@ -25,7 +25,6 @@ Die Bachelorarbeit begann in der Woche vom  16. September 2019 und dauert insges
 \subsubsection{Phasen / Sprints}
 Als Projektmanagement Methode wurde SCRUM gewählt. Das gesamte Projekt wird in die vier Phasen Inception, Elaboration, Construction und Transition eingeteilt. Pro Phase gibt es wiederum einzelne Sprints. Die Sprints starten jeden zweiten Donnerstag und beginnen um 13 Uhr. Zudem wurden einzelne Meilensteine definiert, welche auf der untenstehenden Tabelle entnommen werden können.
 
-
 \subsubsection{Meilensteine}
 \begin{center}
 	\begin{tabular}{| m{3cm} | m{9cm}|}
@@ -55,24 +54,27 @@ Zu Beginn jedes Sprints setzt sich das Team zusammen, um den nächsten Sprint zu
 \subsection{Besprechungen}
 Die Teammitglieder arbeiten an mindestens zwei Tagen pro Woche zusammen im Bachelorarbeits Zimmer. So können Fragen schnell geklärt werden und es kann sich gegenseitig geholfen werden. Im Normalfall findet jeden Donnerstag ein Meeting mit dem Betreuer statt, in dem der aktuelle Stand vorgestellt, Probleme besprochen und das weitere Vorgehen besprochen wird.
 
-\subsection{Git}
+\subsection{Versionskontrolle}
 %TODO GIT beschreiben -> wie ist der Ablauf? -> 4 Augen Prinzip
-Wie in der Branche üblich, wird Git verwendet um den Source-Code zu verwalten. Um sicherzustellen, dass die Qualität des Codes möglichst hoch ist und beide Teammitglieder immer auf dem aktuellen Stand sind, wurde beschlossen, dass merge-requests unumgänglich sind. Mit dieser Massnahme wird erzwungen, dass jede geschriebene Zeile Code, die in den Master-Branch gemerged werden soll, von mindestens einer weiteren Person zur Kenntniss genommen und überdacht wurde. 
+Um den Source Code der gesamten Applikation zu verwalten, kommt git zum Einsatz. So kann sichergestellt werden, dass die Qualität des Codes zu jeder Zeit gewährleistet ist. Damit die Teammitglieder immer auf dem neusten Stand sind, wurde beschlossen, dass Merge-Requests unumgänglich sind. Mit dieser Massnahme wird erzwungen, dass jede geschriebene Zeile Code, die in den Master-Branch gemerged werden soll, von mindestens einer weiteren Person zur Kenntniss genommen und überdacht wird. 
 
-\subsection{Jira}
+\subsection{Projektverwaltung}
 %TODO JIRA workflow beschreiben
-Als Projektverwaltungstool haben wir uns für die Applikation Jira entschieden. Dies weil bereits beide damit gearbeitet haben und sich damit zurechtfinden. Um den Stand der einzelnen Arbeitspakete möglichst genau darzustellen, haben wir einen eigenen simplen Workflow definiert. 
+Als Projektverwaltungstool wird Jira verwendet. Man hat sich für dieses Tool entschieden, da es die gewünschte Funktionalität mit sich bringt und trotzdem sehr schlank und übersichtlich ist. Um den Stand der einzelnen Arbeitspakete möglichst genau darzustellen, wurde ein Workflow definiert, welcher jedes Arbeitspaket durchlaufen muss.
 %TODO BILD Workflow einfügen
+%TODO ich wür review als workflow schritt use neh. wenn du arbeitspaket erfassisch, denn mussi das ned nomal aluege. review isch guet für code. wenn du doku korrigiersch, wottis ned nomal müsse aluege.
 Wie im Bild oben ersichtlich ist, muss jedes Arbeitspaket folgende Status durchlaufen: Open, In Progress, Review und Done. Ein Arbeitspaket kann jeweils nur ein Status vor und/oder zurück verschoben werden. Dies soll verhindern, dass ein Paket direkt vom Status Open in den Status Done verschoben wird. Sobald ein Arbeitspaket den Status Done erreicht hat, kann dies nicht mehr rückgängig gemacht werden. 
 
 \subsection{Code Styleguide}
 %TODO Code Styleguide beschreiben
+%TODO Quelle: https://marketplace.visualstudio.com/items?itemName=ChrisDahlberg.StyleCop
+Bei der Vorgänger Arbeit wurde StyleCop eingesetzt. Dabei handelt es sich um ein Tool, welches bestimmte Style und Konsistenz Regeln erzwingt. Dieses Tool kann direkt in Visual Studio verwendet werden, ohne das Änderungen am Code vorgenommen werden müssen.
 
 \subsection{Performance Tests}
 %TODO Last Test vor Arbeit und nachher machen und sagen, was besser ist (oder schlechter)
-Um sicherzustellen, dass die Performance der Applikation durch unsere Anpassungen nicht verschlechtert wird, soll ein Performance-Tests jeweils vor und nach den Änderungen durchgeführt werden. Unsere Vorgänger haben eine kleine Applikation geschrieben, welche die Performance testet, diese Applikation soll nun wieder zum Einsatz kommen. 
+Um sicherzustellen, dass die Performance der Applikation durch Anpassungen nicht verschlechtert wird, wird beim Beginn der Arbeit ein Performance Test durchgeführt. Diese Performance Tests werden regelmässig durchgeführt, so dass allfällige Verschlechterungen schnell bemerkt und behoben werden können. Die Vorgänger bereits eine Applikation geschrieben, welche die Performance testet. Diese Applikation wird auch bei dieser Arbeit wieder verwendet. 
 
-\subsection{Jenkins}
-%TODO Jenkins beschreiben
-
+\subsection{Continuous Integration / Continuous Development}
+Beim CI/CD Ansatz wird der Code regelmässig in den Master Branch gemerged. Bei diesem Schritt werden die Änderungen automatisch validiert und getestet. Somit kann eine ''integration hell'' vermieden werden, da man nie zu weit vom Master Branch abweicht. \\
+Um diesen Ansatz umsetzen zu können, kommt Jenkins zum Einsatz.
 \newpage
