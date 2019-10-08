@@ -53,12 +53,26 @@ Als Projektmanagement Methode wurde SCRUM gewählt. Das gesamte Projekt wird in 
 Zu Beginn jedes Sprints setzt sich das Team zusammen, um den nächsten Sprint zu planen. Dabei wird jeweils besprochen, welche Aufgaben des vergangenen Sprints nicht vollständig abgeschlossen werden konnten. Die nicht abgeschlossenen Arbeiten werden mit neu definierten Aufgaben in den neuen Sprint übernommen und jeweils zeitlich abgeschätzt und priorisiert. Da sich im Team nur 2 Mitglieder befinden, wird darauf verzichtet, die Arbeitspakete unter den Teammitgliedern untereinander zuzuweisen. Die gesamte Planung und Verwaltung der Aufgaben wird in Jira erledigt.
 
 \subsection{Besprechungen}
-Die Teammitglieder arbeiten an mindestens zwei Tagen pro Woche zusammen im Bachelorarbeits Zimmer. So können Fragen schnell geklärt werden und es kann sich gegenseitig geholfen werden.
+Die Teammitglieder arbeiten an mindestens zwei Tagen pro Woche zusammen im Bachelorarbeits Zimmer. So können Fragen schnell geklärt werden und es kann sich gegenseitig geholfen werden. Im Normalfall findet jeden Donnerstag ein Meeting mit dem Betreuer statt, in dem der aktuelle Stand vorgestellt, Probleme besprochen und das weitere Vorgehen besprochen wird.
 
+\subsection{Git}
 %TODO GIT beschreiben -> wie ist der Ablauf? -> 4 Augen Prinzip
+Wie in der Branche üblich, wird Git verwendet um den Source-Code zu verwalten. Um sicherzustellen, dass die Qualität des Codes möglichst hoch ist und beide Teammitglieder immer auf dem aktuellen Stand sind, wurde beschlossen, dass merge-requests unumgänglich sind. Mit dieser Massnahme wird erzwungen, dass jede geschriebene Zeile Code, die in den Master-Branch gemerged werden soll, von mindestens einer weiteren Person zur Kenntniss genommen und überdacht wurde. 
+
+\subsection{Jira}
 %TODO JIRA workflow beschreiben
+Als Projektverwaltungstool haben wir uns für die Applikation Jira entschieden. Dies weil bereits beide damit gearbeitet haben und sich damit zurechtfinden. Um den Stand der einzelnen Arbeitspakete möglichst genau darzustellen, haben wir einen eigenen simplen Workflow definiert. 
+%TODO BILD Workflow einfügen
+Wie im Bild oben ersichtlich ist, muss jedes Arbeitspaket folgende Status durchlaufen: Open, In Progress, Review und Done. Ein Arbeitspaket kann jeweils nur ein Status vor und/oder zurück verschoben werden. Dies soll verhindern, dass ein Paket direkt vom Status Open in den Status Done verschoben wird. Sobald ein Arbeitspaket den Status Done erreicht hat, kann dies nicht mehr rückgängig gemacht werden. 
+
+\subsection{Code Styleguide}
 %TODO Code Styleguide beschreiben
+
+\subsection{Performance Tests}
 %TODO Last Test vor Arbeit und nachher machen und sagen, was besser ist (oder schlechter)
+Um sicherzustellen, dass die Performance der Applikation durch unsere Anpassungen nicht verschlechtert wird, soll ein Performance-Tests jeweils vor und nach den Änderungen durchgeführt werden. Unsere Vorgänger haben eine kleine Applikation geschrieben, welche die Performance testet, diese Applikation soll nun wieder zum Einsatz kommen. 
+
+\subsection{Jenkins}
 %TODO Jenkins beschreiben
 
 \newpage
