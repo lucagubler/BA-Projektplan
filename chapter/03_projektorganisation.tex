@@ -9,16 +9,16 @@
     top color = blue!90!black, bottom color = blue!60!black,
     text width = 3.5cm, align = center, minimum height = 1.5cm}]
   	
-  	\node (TSDF)                                 {\textbf{TSDF}\\Bachelorarbeit};
-  	\coordinate [below = 1.9cm of TSDF] (Mitte);
-  	\coordinate [below = 3.5cm of TSDF] (Unten);
+  	\node (TSDC)                                 {\textbf{TSDC}\\Bachelorarbeit};
+  	\coordinate [below = 1.9cm of TSDC] (Mitte);
+  	\coordinate [below = 3.5cm of TSDC] (Unten);
   	\node (Betreuer)		[right = 3mm of Mitte]  	{\textbf{Betreuer} \\ Frank Koch \\ \textbf{Experte} \\ Stefan Meier \\ Laurent Metzger};
   	\node (Backend)		[below = 1cm of Betreuer]  	{\textbf{Backend} \\ Luca Gubler \\ Alessandro Bonomo};
   	\node (MobileApp)		[right  = of Backend]  		{\textbf{Mobile App} \\ Alessandro Bonomo};
   	\node (AdminPanel)		[left = of Backend]	{\textbf{Admin Panel} \\ Luca Gubler};
   
   	\draw [blue!60!black,thick]
-    (TSDF)    -- (Mitte) -- (Betreuer)
+    (TSDC)    -- (Mitte) -- (Betreuer)
     (Betreuer)   -- (Mitte) -- (Unten) -| (Backend)
     (Unten) -| (AdminPanel)
     (Unten) -| (MobileApp);
