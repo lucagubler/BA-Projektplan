@@ -27,6 +27,7 @@
 \usepackage{float}
 \usepackage{natbib}
 \usepackage{tabularx}
+\usepackage{tabulary}
 \usepackage{booktabs}
 \usepackage{titlesec}
 \usepackage[acronym]{glossaries}

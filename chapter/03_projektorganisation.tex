@@ -1,34 +1,17 @@
 \section{Projektorganisation}
+Bei diesem Projekt wird nach SCRUM+ vorgegangen. Bei dieser Projektmanagement Methode handelt es sich um einen Mix aus SCRUM und Unified Process. Diese Methode wird auch von Daniel Keller im Modul ''Software Engineering'' unterrichtet.
 
 \subsection{Organisationsstruktur}
-\begin{figure}[!h]
-\centering
+Bei dieser Bachelorarbeit sind alle Personen gleichgestellt und jeder hat die selbe Entscheidungsgewalt. Sollte es zu Problemen kommen, wird gemeinsam über den weiteren Projektverlauf entschieden werden. Falls man sich jedoch nicht einig wird, wird mit Frank Koch zusammen nach einer Lösung gesucht.
 
-\begin{tikzpicture}[auto, node distance = 0.4cm, thick,
-  every node/.style = {rectangle, font = \sffamily, white,
-    top color = blue!90!black, bottom color = blue!60!black,
-    text width = 3.5cm, align = center, minimum height = 1.5cm}]
-  	
-  	\node (TSDC)                                 {\textbf{TSDC}\\Bachelorarbeit};
-  	\coordinate [below = 1.9cm of TSDC] (Mitte);
-  	\coordinate [below = 3.5cm of TSDC] (Unten);
-  	\node (Betreuer)		[right = 3mm of Mitte]  	{\textbf{Betreuer} \\ Frank Koch \\ \textbf{Experte} \\ Stefan Meier \\ Laurent Metzger};
-  	\node (Backend)		[below = 1cm of Betreuer]  	{\textbf{Backend} \\ Luca Gubler \\ Alessandro Bonomo};
-  	\node (MobileApp)		[right  = of Backend]  		{\textbf{Mobile App} \\ Alessandro Bonomo};
-  	\node (AdminPanel)		[left = of Backend]	{\textbf{Admin Panel} \\ Luca Gubler};
-  
-  	\draw [blue!60!black,thick]
-    (TSDC)    -- (Mitte) -- (Betreuer)
-    (Betreuer)   -- (Mitte) -- (Unten) -| (Backend)
-    (Unten) -| (AdminPanel)
-    (Unten) -| (MobileApp);
-\end{tikzpicture}
-\end{figure}
+\subsection*{Luca Gubler}
+Die Idee für das Thema dieser Bachelorarbeit stammt von Luca. Aus diesem Grund kümmert er sich um den groben Projektverlauf der Arbeit. Bei der Arbeit selber kümmert er sich hauptsächlich um die Infrastruktur, die Datenbank und das Backend der Applikation.
 
-\noindent Im Bild wurde die Organisationsstruktur dargestellt. Diese Organigramm wurde jedoch nur zum aufzeigen der groben Zuständigkeiten erstellt. Bei Fragen oder Problemen wird sich das Team gegenseitig unterstützen.
+\subsection*{Alessandro Bonomo}
+Alessandro kümmert sich hauptsächlich um das Frontend und das UI der Applikation. Er arbeitet jedoch auch am Backend mit und kümmert sich um das Testing der Applikation.
 
-\subsection{Externe Schnittstellen}
-Bei dieser Bachelorarbeit übernimmt Professor Frank Koch die Rolle des Betreuers. Stefan Meier, welcher bereits bei der früheren Bachelorarbeit die Rolle als externer Co-Examinators übernahm, wird auch bei dieser Bachelorarbeit diese Aufgabe übernehmen. Zusätzlich wird Professor Laurent Metzger diese Bachelorarbeit als interner Co-Examinator betreuen.
+\subsection*{Externe Personen}
+Bei dieser Bachelorarbeit übernimmt Professor Frank Koch die Rolle des Betreuers. Stefan Meier übernimmt die Rolle als externer Co-Examinators. Zusätzlich wird Professor Laurent Metzger diese Bachelorarbeit als interner Co-Examinator betreuen.
 
 
 \newpage
