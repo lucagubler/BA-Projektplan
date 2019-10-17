@@ -1,24 +1,45 @@
 \section{Risikomanagement}
-
 \subsection{Risiken}
+Folgende Risiken sind beim Beginn der Bachelorarbeit erkannt worden:
+\begin{center}
+	\begin{tabularx}{\textwidth}{p{0.05\textwidth} p{0.35\textwidth} p{0.1\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
+	\toprule
+	Nr & Beschreibung & Schaden total [h] & Eintritts-wahrscheinlichkeit & Gweichteter Schaden [h]\\ \midrule
+	R1 & Unterschätzen des Aufwandes & 60 & 20 \% & 12 \\
+	R2 & Fehldendes KnowHow von \newline Python oder Frameworks & 60 & 20 \% & 12 \\
+	R3 & Konflikte im Team & 8 & 5 \% & 0.4 \\
+	R4 & Missverständnisse im Team & 12 & 5 \% & 0.6 \\
+	R5 & Technische \newline Fehlkonfigurationen & 60 & 20 \% & 12 \\
+	R6 & Probleme beim Deployment & 24 & 25 \% & 6 \\ \bottomrule
+	\end{tabularx}
+	\captionof{table}{Risikoübersicht}
+\end{center}
+
+\medskip \noindent
+Daraus resultiert folgender Risikograph: 
 \begin{figure}[H]
-	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/risikoanalyse_vorher.png}
-	\caption{Ursprüngliche Risikoanalyse}
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/risikoanalyse.png}
+	\caption{Risikograph}
 \end{figure}
 
-\noindent Die detailierte Risikoanalyse kann dem Dokument ''TechnischeRisiken.xlsx'' entnommen werden.\\
-Wie man der Grafik entnehmen kann, ist das Risiko R1 - ''Probleme beim Aufsetzen des Prototypen'' das grösste Risiko. Zum einen ist der Prototyp sehr umfangreich und hat mehrere Komponenten wie das Admin Panel oder die Serverseitigen Applikationen, respektive IIS. Bei diesen Komponenten könnte zum einen fehlendes Know-How zu einem Problem werden. Des weiteren ist der Prototyp mittlerweile 4 Jahre alt. Es könnte durchaus sein, dass API Abfragen nicht mehr funktionieren oder Komponenten veraltet sind. Diese müssten zuerst korrigiert werden, bevor der Prototyp überhaupt läuft.
+\noindent In der Inception Phase wurde ein total gewichteter Schaden von 57.4 Arbeitsstunden geschätzt. Durch gezielte Massnahmen konnte dieser Schaden auf 43 Arbeitsstunden vermindert werden. \\
+Aufgrund dieser Annahme und weil der Zeitraum durch die Verzögerungen zu Beginn der Arbeit recht knapp bemessen ist, wurde zum Schluss der Bachelorarbeit 2 Wochen Pufferzeit einberechnet. 
 
 \subsection{Umgang mit Risiken}
-Risiken lassen sich in einem grösseren Projekt leider nicht vermeiden. Allfällige Risiken werden jeweils zu Beginn eines Sprints im Team angesprochen. Falls es als sinnvoll erachtet wird, werden auch gleich Massnahmen ergriffen um das Risiko einzudämmen.\\
-Für die wahrscheinlichen Risiken wurden Massnahmen definiert, um den auftretetenden Schaden unter Kontrolle zu bringen. Sollten während des Projektes neue Risiken hervortreten, werden diese in die Risikoanalyse aufgenommen und bewertet.
+Risiken lassen sich in einem grösseren Projekt leider nicht ganz vermeiden. Für die erfassten Risiken wurden Massnahmen definiert, um das Risiko weitgehen zu minimieren. In der nachfolgenden Tabelle sind diese Massnahmen aufgelistet.
 
-\subsection{Aktualisierte Risikoanalyse}
-Nach der Aufnahme der Risikon wurde versucht, die am höchsten gewichteten Risiken zu minimieren. Wie man der Grafik entnehmen kann, konnten alle Risiken ausser dem Risiko R1, verringert werden.
-\begin{figure}[H]
-	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/risikoanalyse_nachher.png}
-	\caption{Aktualisierte Risikoanalyse}
-\end{figure}
+\begin{center}
+	\begin{tabularx}{\textwidth}{p{0.05\textwidth} p{0.45\textwidth} p{0.4\textwidth} }
+	\toprule
+	Nr & Getroffene Massnahme & Verhalten beim Eintreten \\	\midrule
+	R1 & Reserve einplanen, genaue Abgrenzung des Scopes, einhalten des Projektplans & Reserve nutzen und notfalls den Projektumfang reduzieren \\
+	R2 & In der Elaboration Phase Zeit einplanen, um sich in die einzelnen Technologien einarbeiten zu können & Fehlendes KnowHow aufbauen. Dies kann alleine oder mit Unterstützung des anderen Teammitglieds gemacht werden. \\
+	R3 & Gemeinsame Teammeetings, untereinander absprechen, jedes Teammitglied hat gleich viel Verantwortung. & Sollte sich das Problem nicht im Team lösen lassen, mit dem Betreuer nach Lösungen suchen. \\
+	R4 & Protokolle führen und klar dokumentieren. Sich mindestens 2x pro Woche treffen und gemeinsam arbeiten. Bei Fragen diese direkt mit der anderen Person klären. & Protokolle und Dokumentationen beiziehen. Zusammen arbeiten und Unklarheiten direkt ansprechen. \\
+	R5 & KnowHow Aufbau in der Elaboration Phase, Regelmässige Backups, 4-Augen Prinzip & Restore allfälliger Backups, Redeployment des Systems \\
+	R6 & Vorläufig schon testen, wie man die Anwendung deployen kann & Recherchieren, wie man eine Django Anwendung deployed \\ \bottomrule
+	\end{tabularx}
+	\captionof{table}{Massnahmen für einzelne Risiken}
+\end{center}
 
-Details können dem Dokument ''TechnischeRisiken.xlsx'' entnommen werden.
 \newpage
