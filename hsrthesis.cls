@@ -26,6 +26,7 @@
 \usepackage{url}
 \usepackage{float}
 \usepackage{natbib}
+\usepackage{tabu}
 \usepackage{tabularx}
 \usepackage{caption}
 \usepackage{booktabs}

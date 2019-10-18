@@ -1,19 +1,23 @@
 \section{Risikomanagement}
 \subsection{Risiken}
 Folgende Risiken sind beim Beginn der Bachelorarbeit erkannt worden:
-\begin{center}
-	\begin{tabularx}{\textwidth}{p{0.05\textwidth} p{0.35\textwidth} p{0.1\textwidth} p{0.2\textwidth} p{0.2\textwidth}}
+
+\begin{table}[h]
+	\centering
+	\begin{tabu} to 0.9\textwidth {l p{0.3\textwidth} X X X}
 	\toprule
-	Nr & Beschreibung & Schaden total [h] & Eintritts-wahrscheinlichkeit & Gweichteter Schaden [h]\\ \midrule
+	Nr & Beschreibung & Schaden total [h] & Eintritts-wahrschein-lichkeit & Gweichteter Schaden [h]\\ 
+	\midrule
 	R1 & Unterschätzen des Aufwandes & 60 & 20 \% & 12 \\
 	R2 & Fehldendes KnowHow von \newline Python oder Frameworks & 60 & 20 \% & 12 \\
 	R3 & Konflikte im Team & 8 & 5 \% & 0.4 \\
 	R4 & Missverständnisse im Team & 12 & 5 \% & 0.6 \\
 	R5 & Technische \newline Fehlkonfigurationen & 60 & 20 \% & 12 \\
-	R6 & Probleme beim Deployment & 24 & 25 \% & 6 \\ \bottomrule
-	\end{tabularx}
+	R6 & Probleme beim Deployment & 24 & 25 \% & 6 \\ 
+	\bottomrule
+	\end{tabu}
 	\captionof{table}{Risikoübersicht}
-\end{center}
+\end{table}
 
 \medskip \noindent
 Daraus resultiert folgender Risikograph: 
@@ -28,18 +32,21 @@ Aufgrund dieser Annahme und weil der Zeitraum durch die Verzögerungen zu Beginn
 \subsection{Umgang mit Risiken}
 Risiken lassen sich in einem grösseren Projekt leider nicht ganz vermeiden. Für die erfassten Risiken wurden Massnahmen definiert, um das Risiko weitgehen zu minimieren. In der nachfolgenden Tabelle sind diese Massnahmen aufgelistet.
 
-\begin{center}
-	\begin{tabularx}{\textwidth}{p{0.05\textwidth} p{0.45\textwidth} p{0.4\textwidth} }
+\begin{table}[h]
+	\centering
+	\begin{tabu} to 0.9\textwidth {l X X}
 	\toprule
-	Nr & Getroffene Massnahme & Verhalten beim Eintreten \\	\midrule
+	Nr & Getroffene Massnahme & Verhalten beim Eintreten \\	
+	\midrule
 	R1 & Reserve einplanen, genaue Abgrenzung des Scopes, einhalten des Projektplans & Reserve nutzen und notfalls den Projektumfang reduzieren \\
 	R2 & In der Elaboration Phase Zeit einplanen, um sich in die einzelnen Technologien einarbeiten zu können & Fehlendes KnowHow aufbauen. Dies kann alleine oder mit Unterstützung des anderen Teammitglieds gemacht werden. \\
 	R3 & Gemeinsame Teammeetings, untereinander absprechen, jedes Teammitglied hat gleich viel Verantwortung. & Sollte sich das Problem nicht im Team lösen lassen, mit dem Betreuer nach Lösungen suchen. \\
 	R4 & Protokolle führen und klar dokumentieren. Sich mindestens 2x pro Woche treffen und gemeinsam arbeiten. Bei Fragen diese direkt mit der anderen Person klären. & Protokolle und Dokumentationen beiziehen. Zusammen arbeiten und Unklarheiten direkt ansprechen. \\
 	R5 & KnowHow Aufbau in der Elaboration Phase, Regelmässige Backups, 4-Augen Prinzip & Restore allfälliger Backups, Redeployment des Systems \\
-	R6 & Vorläufig schon testen, wie man die Anwendung deployen kann & Recherchieren, wie man eine Django Anwendung deployed \\ \bottomrule
-	\end{tabularx}
+	R6 & Vorläufig schon testen, wie man die Anwendung deployen kann & Recherchieren, wie man eine Django Anwendung deployed \\ 
+	\bottomrule
+	\end{tabu}
 	\captionof{table}{Massnahmen für einzelne Risiken}
-\end{center}
+\end{table}
 
 \newpage
