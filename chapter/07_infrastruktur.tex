@@ -1,7 +1,7 @@
 \section{Infrastruktur}
 Die Infrastruktur setzt sich aus der Hard- und Software zusammen, welche für die Durchführung der Bachelorarbeit verwendet wird. So kann die Zusammenarbeit im Team erleichtert werden. Zudem kann die Code Qualität besser überprüft und verbessert werden.
 \\
-Viele Tools sind bereits aus Modulen oder vergangenen Projektarbeiten bekannt, weshalb man sich schnell auf bestimmte Tools einigen konnte. Trotzdem gibt es noch einige Unklarheiten, da einige Tools von anderen abhängig sind. Erst im späteren Projektverlauf wird sich zeigen, ob diese Tools verwendet werden. Es kann aber auch sein, dass einige Tools, welche erwähnt werden, gar nicht im Projekt eingesetzt werden.
+Viele der verwendeten Tools sind bereits aus Modulen oder vergangenen Projektarbeiten bekannt, weshalb man sich schnell auf bestimmte Tools einigen konnte. Trotzdem gibt es noch einige Unklarheiten, da einige Tools von anderen abhängig sind. Erst im späteren Projektverlauf wird sich zeigen, ob diese Tools verwendet werden. Es kann aber auch sein, dass einige Tools, welche erwähnt werden, gar nicht im Projekt eingesetzt werden.
 
 \subsection{Arbeitspakete Verwaltung}
 Für das Verwalten der Arbeitspakete entschied sich das Team, Jira zu verwenden. Für das Engineering Projekt und die Studienarbeit wurde ebenfalls Jira verwendet. So ist es mit Jira sehr einfach, Workflows zu definieren, neue Arbeitspakete zu erfassen und die Arbeitszeit auszuwerten. Zudem ist das Reporting mit Jira sehr gut und man sehr schnell Burndown Charts erstellen.
@@ -9,15 +9,33 @@ Für das Verwalten der Arbeitspakete entschied sich das Team, Jira zu verwenden.
 \subsection{Konstruktion}
 Als Versionsverwaltung wird GIT verwendet, da es zum de facto Standart in der Software Entwicklung gehört. Der grosse Vorteil ist, dass man nicht ständig mit dem Server verbunden sein muss. Zudem konnte jedes Mitglied bereits Erfahrungen mit Github sammeln, was den Einstieg erleichtert.
 \\
-Als Entwicklungsumgebung wird Visual Studio von Microsoft verwendet.
+Als Entwicklungsumgebung wird PyCharm von JetBrains verwendet.
 
-\subsection{Testing}
-Sämtlicher Code muss getestet werden. Da die Team Mitglieder jedoch noch nicht viel Erfahrung in der C\# / ASP.NET Entwicklung haben, muss dieser Punkt jedoch noch genauer evaluiert werden.
 %TODO Frameworks beschreiben 
+\subsection{Testing}
+Sämtlicher Code muss getestet werden. Da aber beide Team Mitglieder noch nie mit Django gearbeitet haben, kann noch nicht genau gesagt werden, welche Frameworks für das Testing der Applikation verwendet werden.
 
+% Quellen
+% https://www.djangoproject.com/
+% https://docs.djangoproject.com/en/2.2/topics/security/
 \subsection{Infrastruktur}
-Da sich das Projekt aus mehreren Applikationen zusammen setzt, werden diese folglich auch an unterschiedlichen Orten eingesetzt. Das Admin Panel wird auf einem Windows Client ausgeführt und das Mobile App auf einem Android Handy. Die Server Applikation wird auf einem Windows Server deployed und als Datenbank kommt MS SQL Server zum Einsatz.
-\\
-Das Ziel dieser Arbeit ist es, die bereits existierende Applikation um neue Funktionalitäten zu erweiteren. Schwerwiegende Änderungen an der Software Architektur sollen folglich vermieden werden.
+\subsubsection*{Django}
+Die Website wird mit Django umgesetzt. Bei Django handelt es sich um ein high-level Python Framework, welches eine schnelle Entwicklung und sauberes, pragmatisches Design unterstützt. Eine schnelle Entwicklung bedeutet, dass Django bereits sehr viele Features enthält. So existiert bereits ein OR-Mapper, ein Authentication Modul und viele weitere. Zudem sind auch viele Security Features out-of-the-box enthalten. Django bietet zum Beispiel Schutz gegen Clickjacking, Cross-Site Scripting, Cross Site Request Forgery, SQL Injection oder Remote Code Execution.
+
+\subsubsection*{PostgreSQL}
+Als Datenbank wird Postgres verwendet. Zuerst stand man vor der Entscheidung, ob man eine in-memory datenbank oder eine relationale Datenbank verwendet. Da bei einer in-memory Datenbank die gesamten Daten im RAM gespeichert werden, gehen die Daten bei einem Neustart komplett verloren. Aus diesem Grund konnte man sich schnell auf eine relationale Datenbank festlegen. \\
+Schlussendlich fiel die Entscheidung auf eine Postgres Datenbank. Muss man zu einem späteren Zeitpunkt aber die Datenbank wechseln, so sollte dies mit dem Migrations Tool von Django kein Problem sein.
+
+\subsubsection*{nginx}
+Als Webserver wurde nginx gewählt. Auf diesem Webserver wird die Applikation deployed und den Benutzern zur Verfügung gestellt. 
+
+\subsubsection*{Docker}
+Bei Docker handelt es sich um eine Container Technologie, welche bei der Entwicklung eingesetzt wird. Dies hat den Vorteil, dass jede Komponente in einem eigenen, abgekappselten Container läuft. So kommen sich vorinstallierte Libraries oder Dependencies nicht in die Quere. Zudem müssen die einzelnen Frameworks, Tools oder Libraries nicht direkt auf der Entwicklungsumgebung installiert werden. \\
+Docker bietet auch den Vorteil, dass mit praktisch nur einem Befehl die ganze Entwicklungs Umgebung gestartet oder gestoppt werden kann.
+
+\subsubsection*{Travis}
+Als CI/CD Tool entschied man sich für Travis. Bei jedem Push auf Github wird Travis per Webhook benachrichtigt. Travis nimmt den gesamten Code, startet die Docker Container und führt die Tests aus. Sind alle Tests erfolgreich abgeschlossen, wird ein ''Build passing'' Badge ausgestellt. \\
+Gab es jedoch Probleme beim Testing, kann dies Umgehend festgestellt werden. Dies bedeutet, dass sich womöglich ein Bug im Code befindet oder ein Test nicht erfolgreich durchgeführt werden konnte. In einem solchen Fall hat das lösen des Build Problems die oberste Priorität.
+
 
 \newpage
